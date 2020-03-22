@@ -60,6 +60,8 @@ func signHandler(ctx *fasthttp.RequestCtx) {
 	gorgon := make([]byte, 54)
 	timestamp := make([]byte, 12)
 
+	console.Log("url: %s", goUrl)
+
 	ret := C.Signature(url, stub, cookie, unsafe.Pointer(&gorgon[0]), unsafe.Pointer(&timestamp[0]))
 	if ret != 0 {
 		console.Err("Generate ret: %d", ret)

@@ -12,6 +12,10 @@
 #### 一台越狱的iOS设备
 #### 一台Mac或者黑苹果
 
+## 测试地址 勿滥用
+
+`http://aweme.on1x.cn:25584/aweme/sign`
+
 ## 调用
 
 ```json

@@ -39,7 +39,7 @@ func main() {
 	router = make(map[string]map[string]fasthttp.RequestHandler)
 	router["aweme"] = aweme.InitAwemeRouter()
 
-	if err := fasthttp.ListenAndServe("127.0.0.1:25583", requestHandler); err != nil {
+	if err := fasthttp.ListenAndServe(":25583", requestHandler); err != nil {
 		console.Err("fasthttp: %s", err)
 	}
 }

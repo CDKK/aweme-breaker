@@ -11,7 +11,8 @@ export CC=${GOROOT}/misc/ios/clangwrap.sh
 
 all:
 	CGO_ENABLED=1 CGO_CFLAGS="-I${PWD}/include" CGO_LDFLAGS="-framework Foundation" go build
-	ldid -Sglobal.entitlements ibreaker
+#	ldid -Sglobal.entitlements ibreaker
+#	ldid -P -Ksigncert.p12 -Sglobal.entitlements -M ibreaker
 
 clean:
 	rm -rf ibreaker
